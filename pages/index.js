@@ -22,7 +22,6 @@ const Home = () => {
     setselected(false);
     try {
       const croppedImage = await getCroppedImg(img, croppedAreaPixels);
-      console.log("donee", { croppedImage });
       setallimg([...allimg, croppedImage]);
     } catch (e) {
       console.error(e);
@@ -31,7 +30,6 @@ const Home = () => {
 
   const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
     //console.log(croppedArea, croppedAreaPixels);
-    console.log(crop);
     setCroppedAreaPixels(croppedAreaPixels);
   }, []);
 
